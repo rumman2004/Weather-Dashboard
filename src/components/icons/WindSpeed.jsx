@@ -29,7 +29,6 @@ const WindSpeed = ({ size = 40, className = '' }) => {
           </linearGradient>
         </defs>
 
-        {/* Top Stream */}
         <path
           d="M10 30 Q 30 15 50 30 T 90 30"
           stroke="url(#windDetailGradient)"
@@ -39,7 +38,6 @@ const WindSpeed = ({ size = 40, className = '' }) => {
           style={{ animationDuration: '2.5s' }}
         />
         
-        {/* Middle Stream */}
         <path
           d="M5 50 Q 30 65 60 50 T 95 50"
           stroke="url(#windDetailGradient)"
@@ -49,7 +47,6 @@ const WindSpeed = ({ size = 40, className = '' }) => {
           style={{ animationDuration: '2s', animationDelay: '0.2s' }}
         />
         
-        {/* Bottom Stream */}
         <path
           d="M15 70 Q 35 55 55 70 T 85 70"
           stroke="url(#windDetailGradient)"

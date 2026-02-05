@@ -12,7 +12,7 @@ const SearchBar = ({ onSearch, onLocationSelect }) => {
   // USE ENV VARIABLE HERE
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
-  // Helper: Convert country code to Flag Emoji (e.g., IN -> 🇮🇳)
+  // Helper: Convert country code to Flag Emoji
   const getFlagEmoji = (countryCode) => {
     const codePoints = countryCode
       .toUpperCase()

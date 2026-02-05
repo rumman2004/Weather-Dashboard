@@ -12,8 +12,9 @@ import {
 } from 'lucide-react';
 import Card from './components/Card';
 import NavBar from './components/NavBar';
-import WeatherIcon from './components/WeatherIcon';
+import WeatherIcon from './components/WeatherIcon'; // Corrected import
 import Loader from './components/Loader';
+import WindSpeed from './components/icons/WindSpeed'; // Corrected import
 import './index.css';
 
 // USE ENV VARIABLE HERE
@@ -235,7 +236,7 @@ function App() {
                   value={`${weatherData.main.pressure} hPa`}
                 />
                 <DetailBox 
-                  icon={<Wind size={32} className="text-green-500" />}
+                  icon={<WindSpeed size={45} className="text-green-500" />}
                   label="Wind Speed"
                   value={`${weatherData.wind.speed} m/s`}
                 />
