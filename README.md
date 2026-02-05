@@ -2,8 +2,7 @@
 
 A beautiful, modern weather dashboard built with **React**, **Tailwind CSS**, and the **OpenWeatherMap API**. This project features a distinctive "Soft UI" (Neumorphism) design aesthetic, fluid animations, and a fully responsive layout.
 
-![WeatherNeu Dashboard](https://res.cloudinary.com/dtbytfxzs/image/upload/v1770308939/Screenshot_2026-02-05_215842_qgkptn.png)(https://weather-dashboard-beta-lilac.vercel.app/) 
-*(Note: After uploading, replace the link above with a screenshot of your actual running app)*
+![WeatherNeu Dashboard](https://res.cloudinary.com/dtbytfxzs/image/upload/v1770308939/Screenshot_2026-02-05_215842_qgkptn.png=https://weather-dashboard-beta-lilac.vercel.app/)
 
 ## ✨ Features
 
