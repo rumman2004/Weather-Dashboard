@@ -70,6 +70,7 @@ npm run build
 This will generate a dist folder ready for deployment.
 
 ## 📂 Project Structure
+```Structure
 weather-dashboard/
 ├── public/              # Static assets (favicon, etc.)
 ├── src/
@@ -89,6 +90,7 @@ weather-dashboard/
 ├── tailwind.config.js   # Tailwind configuration
 ├── vercel.json          # Vercel deployment config
 └── vite.config.js       # Vite configuration
+```
 
 ## 🤝 Contributing
 Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request.
