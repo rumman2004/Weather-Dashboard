@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, CloudSun } from 'lucide-react';
 import Card from './Card';
 import SearchBar from './SearchBar';
+import logo from '../assets/logo.png';
 
 const NavBar = ({ location, onSearch, onLocationSelect, onRefreshLocation }) => {
   return (
@@ -10,7 +11,12 @@ const NavBar = ({ location, onSearch, onLocationSelect, onRefreshLocation }) => 
         
         {/* Logo Section */}
         <div className="flex items-center gap-3 min-w-fit self-start">
-          <CloudSun className="w-8 h-8 sm:w-10 sm:h-10 text-orange-400" />
+          <img 
+            src={logo} 
+            alt="WeatherNeu Logo" 
+            // Changed sizes: w-16/h-16 for mobile, sm:w-20/sm:h-20 for desktop
+            className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-xl" 
+          />
           <div className="sm:block">
             <h1 className="text-xl font-bold text-gradient">Weather</h1>
           </div>
