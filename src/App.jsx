@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import Card from './components/Card';
 import NavBar from './components/NavBar';
-import WeatherIcon from './components/WeatherIcon'; // Matches new filename
+import WeatherIcon from './components/WeatherIcon';
 import Loader from './components/Loader';
 import WindSpeed from './components/icons/WindSpeed'; // Matches new filename
 import './index.css';
