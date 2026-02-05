@@ -63,10 +63,8 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
   const isDayTime = iconCode.includes('d') || isDay;
   const id = weatherCode?.id;
 
-  // Wrapper style handles sizing
   const wrapperStyle = { width: size, height: size, position: 'relative' };
 
-  // 1. Thunderstorm
   if (main === 'thunderstorm' || (id >= 200 && id < 300)) {
     return (
       <div className={className} style={wrapperStyle}>
@@ -77,7 +75,6 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
     );
   }
 
-  // 2. Drizzle
   if (main === 'drizzle' || (id >= 300 && id < 400)) {
     return (
       <div className={className} style={wrapperStyle}>
@@ -87,7 +84,6 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
     );
   }
 
-  // 3. Rain
   if (main === 'rain' || (id >= 500 && id < 600)) {
     return (
       <div className={className} style={wrapperStyle}>
@@ -97,7 +93,6 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
     );
   }
 
-  // 4. Snow
   if (main === 'snow' || (id >= 600 && id < 700)) {
     return (
       <div className={className} style={wrapperStyle}>
@@ -107,7 +102,6 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
     );
   }
 
-  // 5. Atmosphere (Mist, Fog)
   if (main === 'mist' || main === 'fog' || (id >= 700 && id < 800)) {
     return (
       <div className={className} style={wrapperStyle}>
@@ -117,7 +111,6 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
     );
   }
 
-  // 6. Clear Sky
   if (main === 'clear' || id === 800) {
     return (
       <div className={className} style={wrapperStyle}>
@@ -126,9 +119,7 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
     );
   }
 
-  // 7. Clouds
   if (main === 'clouds' || (id >= 801 && id <= 804)) {
-    // Few/Scattered Clouds (Sun + Cloud)
     if (id === 801 || id === 802 || description.includes('few') || description.includes('scattered')) {
       return (
         <div className={className} style={wrapperStyle}>
@@ -141,7 +132,6 @@ const WeatherIcon = ({ weatherCode, isDay = true, size = 100, className = '' }) 
         </div>
       );
     }
-    // Broken/Overcast Clouds (Cloud + Cloud)
     return (
       <div className={className} style={wrapperStyle}>
         <div className="absolute inset-0"><Cloud size={size} color="#64748B" /></div>

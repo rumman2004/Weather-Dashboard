@@ -9,10 +9,9 @@ const SearchBar = ({ onSearch, onLocationSelect }) => {
   const [isLoading, setIsLoading] = useState(false);
   const searchRef = useRef(null);
   
-  // USE ENV VARIABLE HERE
+  // Use Vite Env Variable
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
-  // Helper: Convert country code to Flag Emoji
   const getFlagEmoji = (countryCode) => {
     const codePoints = countryCode
       .toUpperCase()
@@ -134,7 +133,7 @@ const SearchBar = ({ onSearch, onLocationSelect }) => {
         </div>
       </form>
 
-      {/* Suggestions Dropdown */}
+      {/* Suggestions */}
       {showSuggestions && suggestions.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-4 animate-fadeIn shadow-2xl rounded-3xl overflow-hidden z-50">
           <Card variant="flat" className="p-0 overflow-hidden">

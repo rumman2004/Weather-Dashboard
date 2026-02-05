@@ -12,12 +12,11 @@ import {
 } from 'lucide-react';
 import Card from './components/Card';
 import NavBar from './components/NavBar';
-import WeatherIcon from './components/WeatherIcon'; // Corrected import
+import WeatherIcon from './components/WeatherIcon'; // Matches new filename
 import Loader from './components/Loader';
-import WindSpeed from './components/icons/WindSpeed'; // Corrected import
+import WindSpeed from './components/icons/WindSpeed'; // Matches new filename
 import './index.css';
 
-// USE ENV VARIABLE HERE
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 function App() {
@@ -176,15 +175,10 @@ function App() {
           onRefreshLocation={handleGetCurrentLocation}
         />
 
-        {/* --- Main Dashboard Section --- */}
         <div className="mb-8 animate-fadeIn" style={{ animationDelay: '0.1s' }}>
           <Card variant="flat" hover className="p-6 sm:p-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-              
-              {/* LEFT SIDE: Circular Design */}
               <div className="flex-1 flex flex-col items-center justify-center w-full">
-                
-                {/* Mobile Location Label */}
                 <div 
                   onClick={handleGetCurrentLocation} 
                   className="flex items-center gap-2 mb-8 text-lg sm:text-xl font-semibold text-gray-600 md:hidden cursor-pointer active:opacity-70"
@@ -194,10 +188,7 @@ function App() {
                 </div>
 
                 <div className="relative mb-8">
-                  {/* Neumorphic Circle */}
                   <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full neu-concave flex flex-col items-center justify-center border-[6px] border-[#e0e5ec] shadow-inner transition-all duration-500 hover:scale-105">
-                    
-                    {/* Icon */}
                     <div className="mb-2 filter drop-shadow-md">
                       <WeatherIcon 
                         weatherCode={{ ...currentWeather, id: weatherData.weather[0].id }} 
@@ -205,13 +196,9 @@ function App() {
                         size={window.innerWidth < 640 ? 80 : 100} 
                       />
                     </div>
-
-                    {/* Temperature */}
                     <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-700 tracking-tighter leading-none">
                       {Math.round(weatherData.main.temp)}°
                     </div>
-
-                    {/* Description */}
                     <div className="text-base sm:text-lg font-medium text-gray-500 capitalize mt-2">
                       {currentWeather.description}
                     </div>
@@ -223,7 +210,6 @@ function App() {
                 </div>
               </div>
               
-              {/* RIGHT SIDE: Detail Grid (Lucide Icons) */}
               <div className="flex-1 grid grid-cols-2 gap-4 sm:gap-6 w-full max-w-xl">
                 <DetailBox 
                   icon={<Droplets size={32} className="text-blue-500" />}
@@ -250,7 +236,6 @@ function App() {
           </Card>
         </div>
 
-        {/* --- Info Grid --- */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             <Card variant="convex">
@@ -304,7 +289,6 @@ function App() {
           </div>
         </div>
 
-        {/* --- Hourly Forecast --- */}
         <div className="mb-8 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
           <Card variant="flat">
             <h3 className="text-lg sm:text-xl font-semibold mb-6 flex items-center gap-2"><span>⏰</span> Hourly Forecast</h3>
@@ -327,7 +311,6 @@ function App() {
           </Card>
         </div>
 
-        {/* --- 7-Day Forecast --- */}
         <div className="animate-fadeIn mb-8" style={{ animationDelay: '0.5s' }}>
           <Card variant="flat">
             <h3 className="text-lg sm:text-xl font-semibold mb-6 flex items-center gap-2"><span>📅</span> 7-Day Forecast</h3>

@@ -12,7 +12,7 @@ const NavBar = ({ location, onSearch, onLocationSelect, onRefreshLocation }) => 
         <div className="flex items-center gap-3 min-w-fit self-start">
           <CloudSun className="w-8 h-8 sm:w-10 sm:h-10 text-orange-400" />
           <div className="sm:block">
-            <h1 className="text-xl font-bold text-gradient">WeatherNeu</h1>
+            <h1 className="text-xl font-bold text-gradient">Weather</h1>
           </div>
         </div>
 
